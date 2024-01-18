@@ -53,6 +53,11 @@ Rails.application.configure do
   # Highlight code that triggered database queries in logs.
   config.active_record.verbose_query_logs = true
 
+  config.action_cable.url = "ws://localhost:3000/cable"
+
+  config.action_cable.allowed_request_origins = [/http:\/\/*/, 
+  /https:\/\/*/]
+
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
